@@ -6,15 +6,17 @@ import org.testng.annotations.BeforeMethod;
 public class Base {
     static String relativePath = "/resources/drivers/windows/chromedriver.exe";
     static String chromeDriverPath = System.getProperty("user.dir") + relativePath;
-    public static String URL = "https://amazon.com";
+    public static String URL = "https://amazon.com/";
     static WebDriver driver;
+
     @BeforeMethod
     public void setUp(){
+
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get(URL);
         driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
     }
     @AfterMethod
     public void tearDown(){

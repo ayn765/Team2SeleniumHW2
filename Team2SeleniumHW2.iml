@@ -10,21 +10,40 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/testng-6.14.3.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/selenium-server-3.141.59.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/junit-4.13.2.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/jcommander-1.78.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/hamcrest-core-1.3.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/selenium-java-3.141.59/client-combined-3.141.59.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/selenium-java-3.141.59/libs/byte-buddy-1.8.15.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/selenium-java-3.141.59/libs/commons-exec-1.3.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/selenium-java-3.141.59/libs/guava-25.0-jre.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/selenium-java-3.141.59/libs/okhttp-3.11.0.jar!/" />
-          <root url="jar://$USER_HOME$/Downloads/selenium-java-3.141.59/libs/okio-1.14.0.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/commons-exec-1.3.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/client-combined-3.141.59.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/guava-25.0-jre.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/byte-buddy-1.8.15.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/okhttp-3.11.0.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/okio-1.14.0.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/selenium-server-3.141.59.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/testng-6.14.3.jar!/" />
+          <root url="file://$MODULE_DIR$" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$USER_HOME$/Downloads/selenium-java-3.141.59/client-combined-3.141.59-sources.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/Selenium Dependencies/client-combined-3.141.59-sources.jar!/" />
+          <root url="file://$MODULE_DIR$/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/jcommander-1.78.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/client-combined-3.141.59.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/client-combined-3.141.59-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
