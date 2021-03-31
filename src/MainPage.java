@@ -25,21 +25,33 @@ public class MainPage extends Base{
         Assert.assertEquals(actualEmptyCartMessage, expectedEmptyCartMessage, "The Empty cart message is incorrect.");
     }
 
-    @Test (enabled = true)
-    public void testSomeTest3(){
+    @Test (enabled = false)
+    public void testChangeLangToSpanish(){
         driver.findElement(By.cssSelector(".icp-nav-flag.icp-nav-flag-us")).click();
         driver.findElement(By.xpath("(//i[@class='a-icon a-icon-radio'])[2]")).click();
-        String exp = "Idioma de preferencia";
-        String act = driver.findElement(By.cssSelector("#lop-heading")).getText();
-        Assert.assertEquals(act,exp, "Incorrect");
+        String expectedMessage = "Idioma de preferencia";
+        String actualMessage = driver.findElement(By.cssSelector("#lop-heading")).getText();
+        Assert.assertEquals(actualMessage,expectedMessage, "Message is incorrect.");
     }
 
     @Test (enabled = false)
-    public void testSomeTest4(){
+    public void testSignInIncorrectPhoneNum(){
+        driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1")).click();
+        WebElement phoneEmailInput = driver.findElement(By.cssSelector("#ap_email"));
+        phoneEmailInput.sendKeys("123456789");
+        driver.findElement(By.cssSelector("#continue")).click();
+        String expectedErrorMessage = "Incorrect phone number";
+        String actualErrorMessage = driver.findElement(By.cssSelector("#auth-error-message-box > div > h4")).getText();
+        Assert.assertEquals(actualErrorMessage,expectedErrorMessage, "Error message is incorrect.");
 
     }
-    @Test (enabled = false)
-    public void testSomeTest5(){
+    @Test (enabled = true)
+    public void testAmazonMusicLink() throws InterruptedException {
+        driver.findElement(By.xpath("//a[contains(text(),'Amazon Music')]")).click();
+        Thread.sleep(1000);
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Amazon Music Unlimited | Stream 70 Million Songs & Podcasts";
+        Assert.assertEquals(actualTitle, expectedTitle, "The title is incorrect.");
 
     }
 }
