@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class Nishat extends Base{
+public class MainPage extends Base{
     @Test
     public void testSomeTest1(){
 

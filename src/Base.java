@@ -10,6 +10,7 @@ public class Base {
     static WebDriver driver;
     @BeforeMethod
     public void setUp(){
+
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         driver = new ChromeDriver();
         driver.get(URL);

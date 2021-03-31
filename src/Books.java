@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class Neila extends Base{
+public class Books extends Base{
 
     @Test
     public void testSomeTest1(){
