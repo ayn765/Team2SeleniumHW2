@@ -88,7 +88,7 @@ public class Lamia extends Base {
         Assert.assertEquals(actualTest, expectedTest, "Tests Do NOT MATCH");
     }
 
-    @Test(enabled = true)
+    @Test
     public void testSelectYourAddress(){
       driver.findElement(By.id("glow-ingress-line2")).click();
         String actualTest=driver.getTitle();
