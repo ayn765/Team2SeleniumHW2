@@ -1,26 +1,44 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class MainPage extends Base{
-    @Test
-    public void testSomeTest1(){
-
+    @Test (enabled = false)
+    public void testAllLinks() throws InterruptedException {
+        driver.findElement(By.cssSelector("#nav-hamburger-menu > span")).click();
+        Thread.sleep(2000);
+        List<WebElement> listOfAllLinks= driver.findElements(By.cssSelector("#hmenu-content>ul"));
+        int actualNumOfLinks = listOfAllLinks.size();
+        int expectedNumOfLinks = 37;
+        Assert.assertEquals(actualNumOfLinks,expectedNumOfLinks, "The number of links is incorrect.");
     }
 
-    @Test
-    public void testSomeTest2(){
-
+    @Test (enabled = false)
+    public void testCartLink(){
+        WebElement cart = driver.findElement(By.cssSelector("#nav-cart-count"));
+        cart.click();
+        String actualEmptyCartMessage = driver.findElement(By.xpath("//h2[contains(text(),'Your Amazon Cart is empty')]")).getText();
+        String expectedEmptyCartMessage = "Your Amazon Cart is empty";
+        Assert.assertEquals(actualEmptyCartMessage, expectedEmptyCartMessage, "The Empty cart message is incorrect.");
     }
 
-    @Test
+    @Test (enabled = true)
     public void testSomeTest3(){
-
+        driver.findElement(By.cssSelector(".icp-nav-flag.icp-nav-flag-us")).click();
+        driver.findElement(By.xpath("(//i[@class='a-icon a-icon-radio'])[2]")).click();
+        String exp = "Idioma de preferencia";
+        String act = driver.findElement(By.cssSelector("#lop-heading")).getText();
+        Assert.assertEquals(act,exp, "Incorrect");
     }
 
-    @Test
+    @Test (enabled = false)
     public void testSomeTest4(){
 
     }
-    @Test
+    @Test (enabled = false)
     public void testSomeTest5(){
 
     }
