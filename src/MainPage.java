@@ -54,4 +54,33 @@ public class MainPage extends Base{
         Assert.assertEquals(actualTitle, expectedTitle, "The title is incorrect.");
 
     }
+    @Test
+    public void testSignIn() throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"nav-signin-tooltip\"]/a/span")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("#ap_email")).sendKeys("bouharounwarda@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"continue\"]")).click();
+        Thread.sleep(4000);
+        String expectedTitle="Amazon Sign-In";
+        String actualTitle= driver.getTitle();
+        Assert.assertEquals(actualTitle,expectedTitle,"Test sign in");
+    }
+
+    @Test(priority = 1)
+    public void testPageTitle() {
+        String expectedText = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page title not match");
+    }
+    // first way
+    @Test
+    public void verifyAmazonLogo(){
+        boolean logo=driver.findElement(By.id("nav-logo-sprites")).isDisplayed();
+        Assert.assertTrue(logo);
+    }
+    @Test
+    public void clickOnPrime(){
+        WebElement prime=driver.findElement(By.id("nav-link-prime"));
+        prime.click();
+    }
 }
