@@ -53,7 +53,7 @@ public class AmazonAlexa extends Base{
         List<WebElement> listOfHowCanAlexaHelp = driver.findElements(By.cssSelector(".no_focus.help-dropdown>option"));
         WebElement option2 = listOfHowCanAlexaHelp.get(1);
         String actualTextOption2 = option2.getText();
-        String expectedTextOption2 = "create content that engages my audience";
-        Assert.assertEquals(actualTextOption2, expectedTextOption2, "The text of the 2st option is incorrect.");
+        String expectedTextOption2 = "create content that engages my audience and adding something else";
+        Assert.assertEquals(actualTextOption2, expectedTextOption2, "The text of the 2nd option is incorrect.");
     }
 }
