@@ -54,6 +54,6 @@ public class AmazonAlexa extends Base{
         WebElement option2 = listOfHowCanAlexaHelp.get(1);
         String actualTextOption2 = option2.getText();
         String expectedTextOption2 = "create content that engages my audience";
-        Assert.assertEquals(actualTextOption2, expectedTextOption2, "The text of the 2st option is incorrect.");
+        Assert.assertEquals(actualTextOption2, expectedTextOption2, "The text of the 2nd option is incorrect.");
     }
 }
